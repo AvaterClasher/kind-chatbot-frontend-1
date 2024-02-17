@@ -12,7 +12,7 @@ export const TextToSpeech = () => {
 	const synth = typeof window !== "undefined" ? window.speechSynthesis : null;
 	const voices = synth?.getVoices();
 
-	const seletedVoice = voices?.find((voice) => voice.name === "Karen"); // Other voice that sounds good Karen, Tessa, Trinoids
+	const seletedVoice = voices?.find((voice) => voice.name === "Trinoids");
 
 	const speak = (textToSpeak: string) => {
 		const utterance = new SpeechSynthesisUtterance(textToSpeak);
@@ -68,7 +68,7 @@ export const TextToSpeech = () => {
 					href={"https://www.github.com/AvaterClasher"}>
 					<Image
 						src="/icon-256.png"
-						alt="yt"
+						alt="moni"
 						height={50}
 						width={50}
 					/>
