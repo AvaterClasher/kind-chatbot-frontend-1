@@ -1,3 +1,5 @@
+/** @format */
+
 "use client";
 import { AppContext } from "../app/context/isPlayingContext";
 import {
@@ -88,14 +90,13 @@ export const ChatBotCanvas = () => {
 				maxAzimuthAngle={Math.PI * 0.5}
 			/>
 			<color attach="background" args={["black"]} />
-			<ambientLight intensity={0.015} />
+			<ambientLight intensity={0.315} />
 			<Suspense
 				fallback={
 					<Html>
 						<Loader />
 					</Html>
-				}
-			>
+				}>
 				<Head />
 			</Suspense>
 		</Canvas>

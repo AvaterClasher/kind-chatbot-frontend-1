@@ -1,3 +1,5 @@
+/** @format */
+
 "use client";
 import { AppContext } from "../app/context/isPlayingContext";
 import React, { FormEvent, useContext, useState } from "react";
@@ -45,8 +47,7 @@ export const TextToSpeech = () => {
 		<div className="relative top-0 z-50 ">
 			<form
 				onSubmit={handleUserText}
-				className="absolute top-[850px] left-[30%] space-x-2 pt-2 "
-			>
+				className="absolute top-[850px] left-[34%] space-x-2 pt-2 ">
 				<input
 					type="text"
 					value={userText}
@@ -57,17 +58,20 @@ export const TextToSpeech = () => {
 				<button
 					disabled={isLoading}
 					className="text-[#b00c3f] p-2 border border-[#b00c3f] rounded-lg disabled:text-blue-100 
-					disabled:cursor-not-allowed disabled:bg-gray-500 hover:scale-110 hover:bg-[#b00c3f] hover:text-black duration-300 transition-all"
-				>
+					disabled:cursor-not-allowed disabled:bg-gray-500 hover:scale-110 hover:bg-[#b00c3f] hover:text-black duration-300 transition-all">
 					{isLoading ? "thinking..." : "Ask"}
 				</button>
 			</form>
 			<div className="absolute top-3 right-3 ">
 				<Link
 					target="_blank"
-					href={"https://www.github.com/AvaterClasher"}
-				>
-					<Image src="/icon-256.png" alt="yt" height={50} width={50} />
+					href={"https://www.github.com/AvaterClasher"}>
+					<Image
+						src="/icon-256.png"
+						alt="yt"
+						height={50}
+						width={50}
+					/>
 				</Link>
 				<div className="absolute top-0 bg-black/60" />
 			</div>
