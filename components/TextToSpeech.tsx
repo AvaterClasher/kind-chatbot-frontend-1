@@ -32,7 +32,19 @@ export const TextToSpeech = () => {
 		setIsLoading(true);
 		try {
 			const message = userText;
-			speak(message);
+			const response = await fetch("http://127.0.0.1:8000/chat", {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+				},
+				body: JSON.stringify({
+					user_message: message,
+				}),
+			});
+			const data = await response.json();
+			const message_to_say = data.chatbot_response;
+			console.log(message_to_say)
+			speak(message_to_say)
 		} catch (error) {
 			let message = "";
 			if (error instanceof Error) message = error.message;
